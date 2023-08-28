@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Calculator App</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <img class="theme btn-sun hidden" src="./sun-solid.svg" alt="icon-sun"></button>
+        <img class="theme btn-moon" src="./moon-solid.svg" alt="icon-sun"></button>
+        <div class="history-box">
+          <div>
+            <p class="history"></p>
+            <p id="result1"></p> 
+          </div>
+          <div>
+            <p class="history"></p>
+            <p id="result2"></p> 
+          </div>
+        </div>
+        <div class="process">
+            <label for="inputDisplay" class="label"> </label>
+            <input type="text" name="" id="inputDisplay" title="display" readonly>
+        </div>
+        <div class="keys">
+          <button class="operator-sub clear" type="button">AC</button>
+          <button class="operator-sub inverse" type="button"><sup>+</sup>/<sub>-</sub></button>
+          <button class="operator-sub percent" type="button">%</button>
+          <button class="operator" type="button">÷</button>
+          <button class="number" type="button">7</button>
+          <button class="number" type="button">8</button>
+          <button class="number" type="button">9</button>
+          <button class="operator" type="button">x</button>
+          <button class="number" type="button">4</button>
+          <button class="number" type="button">5</button>
+          <button class="number" type="button">6</button>
+          <button class="operator" type="button">-</button>
+          <button class="number" type="button">1</button>
+          <button class="number" type="button">2</button>
+          <button class="number" type="button">3</button>
+          <button class="operator" type="button">+</button>
+          <button class="number button-0" type="button">0</button>
+          <button class="number" type="button">.</button>
+          <button class="calculate" type="button">=</button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
