@@ -13,6 +13,9 @@ const btnCalculate = document.querySelector(".calculate");
 const historyLabels = document.querySelectorAll(".history");
 const percentBtn = document.querySelector(".percent");
 const inverseBtn = document.querySelector(".inverse");
+let calculationPerformed = false;
+let input = "";
+let negative = false;
 
 function applyColorScheme(darkMode) {
   const bgColor = darkMode ? "hsl(0, 0%, 11%)" : "hsl(225, 40%, 98%)";
@@ -47,9 +50,12 @@ function clearInput() {
   display.value = input;
 }
 
-let input = "";
 for (const numButton of numberButtons) {
   numButton.addEventListener("click", (e) => {
+    if (calculationPerformed) {
+      updateAndClear();
+    }
+
     if (input.includes(".") && numButton.textContent === ".") {
       e.preventDefault();
     } else if (input === "0" && numButton.textContent !== ".") {
@@ -62,7 +68,6 @@ for (const numButton of numberButtons) {
   });
 }
 
-let negative = false;
 inverseBtn.addEventListener("click", () => {
   if (display.value !== "" && display.value !== "0") {
     if (!negative) {
@@ -119,7 +124,6 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-let calculationPerformed = false;
 function performCalculation() {
   updateLabel(input);
   const string = label.textContent
