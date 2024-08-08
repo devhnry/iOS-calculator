@@ -1,7 +1,6 @@
 # IOS Calculator App
 
-![](./public/images/preview.png)
-
+![](./public/preview.png)
 
 ## Table of contents
 
