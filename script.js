@@ -13,6 +13,7 @@ const btnCalculate = document.querySelector(".calculate");
 const historyLabels = document.querySelectorAll(".history");
 const percentBtn = document.querySelector(".percent");
 const inverseBtn = document.querySelector(".inverse");
+
 let calculationPerformed = false;
 let input = "";
 let negative = false;
